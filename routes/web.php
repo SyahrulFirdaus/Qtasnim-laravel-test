@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('/auth/login');
 });
 Route::middleware(['auth'])->group(function () {
-    Route::get('/mcoa/vtester', [McoaController::class, 'vtester']);
+    Route::get('/mcoa/vnormalisasi', [McoaController::class, 'vnormalisasi']);
 
 
     Route::get('/mcoa/vingridients', [McoaController::class, 'vingridients']);

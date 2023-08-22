@@ -30,10 +30,7 @@
                     </a>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
-                            <h6 class="collapse-header">Chart of Account</h6>
-                            <a class="collapse-item" href="/mcoa">Master Chart of Account</a>
-                            <a class="collapse-item" href="/mcoa/vkategori">Kategori Chart of Account</a>
-                            <a class="collapse-item" href="/mcoa/vtransaction">Transaction</a>
+                            <h6 class="collapse-header">Kebutuhan Kafe</h6>
                             <a class="collapse-item" href="/mcoa/vingridients">Ingridients</a>
 
                         </div>
@@ -58,38 +55,38 @@
                                         @csrf
                                       <div class="mb-3">
                                             <label for="exampleInputEmail1" class="form-label">No</label>
-                                            <input type="text" class="form-control" id="no" name="no" aria-describedby="kodeHelp" value="{{ $coa->no }}">
-                                            <div id="kodeHelp" class="form-text">Enter the code number.</div>
+                                            <input type="text" class="form-control border border-warning" id="no" name="no" value="{{ $coa->no }}" required>
+                                            <div class="form-text">Enter the code number.</div>
                                         </div>
 
                                         <div class="mb-3">
                                             <label for="exampleInputEmail1" class="form-label">Nama Barang</label>
-                                            <input type="text" class="form-control" id="nama_barang" name="nama_barang" aria-describedby="nikHelp" value="{{ $coa->nama_barang }}">
-                                            <div id="namaHelp" class="form-text">Enter the item name.</div>
+                                            <input type="text" class="form-control border border-warning" id="nama_barang" name="nama_barang" value="{{ $coa->nama_barang }}" required>
+                                            <div class="form-text">Enter the item name.</div>
                                         </div>
 
                                         <div class="mb-3">
                                             <label for="exampleInputEmail1" class="form-label">Stok</label>
-                                            <input type="text" class="form-control" id="stok" name="stok" aria-describedby="nikHelp" value="{{ $coa->stok }}">
-                                            <div id="namaHelp" class="form-text">Enter the number of stock items.</div>
+                                            <input type="text" class="form-control border border-warning" id="stok" name="stok" value="{{ $coa->stok }}" required>
+                                            <div class="form-text">Enter the number of stock items.</div>
                                         </div>
 
                                         <div class="mb-3">
                                             <label for="exampleInputEmail1" class="form-label">Jumlah Terjual</label>
-                                            <input type="text" class="form-control" id="jumlah_terjual" name="jumlah_terjual" aria-describedby="nikHelp" value="{{ $coa->jumlah_terjual }}">
-                                            <div id="namaHelp" class="form-text">Enter the number of items sold.</div>
+                                            <input type="text" class="form-control border border-warning" id="jumlah_terjual" name="jumlah_terjual" value="{{ $coa->jumlah_terjual }}" required>
+                                            <div class="form-text">Enter the number of items sold.</div>
                                         </div>
 
                                         <div class="mb-3">
                                             <label for="exampleInputEmail1" class="form-label">Tanggal Transaksi</label>
-                                            <input type="date" class="form-control" id="tanggal_transaksi" name="tanggal_transaksi" aria-describedby="nikHelp" value="{{ $coa->tanggal_transaksi}}">
-                                            <div id="namaHelp" class="form-text">Enter the date of the sales transaction.</div>
+                                            <input type="date" class="form-control border border-warning" id="tanggal_transaksi" name="tanggal_transaksi" value="{{ $coa->tanggal_transaksi}}" required>
+                                            <div class="form-text">Enter the date of the sales transaction.</div>
                                         </div>
 
                                         <div class="mb-3">
                                             <label for="exampleInputEmail1" class="form-label">Jenis Barang</label>
-                                            <input type="text" class="form-control" id="jenis_barang" name="jenis_barang" aria-describedby="nikHelp" value="{{ $coa->jenis_barang }}">
-                                            <div id="namaHelp" class="form-text">Enter the type of item name.</div>
+                                            <input type="text" class="form-control border border-warning" id="jenis_barang" name="jenis_barang" value="{{ $coa->jenis_barang }}" required>
+                                            <div class="form-text">Enter the type of item name.</div>
                                         </div>
                                     <a class="btn btn-warning" href="/mcoa/vingridients">Cancel</a>
                                     <button type="submit" class="btn btn-primary" value="save">Save</button>
@@ -103,16 +100,11 @@
                 <footer class="sticky-footer bg-white">
                     <div class="container my-auto">
                         <div class="copyright text-center my-auto">
-                            <span>Copyright &copy; Your Website 2020</span>
+                            <span>Copyright &copy; Qtasnim Website 2023</span>
                         </div>
                     </div>
                 </footer>
             </div>
         </div>
-
-        <a class="scroll-to-top rounded" href="#page-top">
-            <i class="fas fa-angle-up"></i>
-        </a>
-
    @endsection
         

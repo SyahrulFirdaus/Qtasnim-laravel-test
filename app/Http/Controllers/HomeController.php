@@ -24,11 +24,13 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Request $request)
     {
-        $roleIngridients = Ingridients::all();
-        $roleCoa = Mcoa::all();
-        $roleKategori = Mkategori::all();
-        return view('coa.ingridient', compact(['roleCoa', 'roleKategori', 'roleIngridients']));
+        if ($request->has('search')) {
+            $roleIngridients = Ingridients::where('nama_barang', 'LIKE', '%' . $request->search . '%')->get();
+        } else {
+            $roleIngridients = Ingridients::all();
+        }
+        return view('coa.ingridient', ['roleIngridients' => $roleIngridients]);
     }
 }
